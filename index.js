@@ -12,7 +12,7 @@ var defaultGame =  { id: uuidv1() , players: [] };
 var Games = [];
 
 function createGame() {
-		var game = { ...defaultGame };
+		var game = defaultGame;
 		Games.push(game);
 		return game;
 };
