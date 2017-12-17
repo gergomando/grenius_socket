@@ -10,9 +10,8 @@ socket.emit('want-to-join', {
 
 socket.on('player-joined', (res) => {
 	if(res.gameID && !gameID) gameID = res.gameID;
-	if(gameID === res.gameID) {
-		console.warn(res.msg);
-		console.warn('gameID: ' + res.game.id);
-		console.warn('players: ' + res.game.players);
-	}
+	if(gameID !== res.gameID) return;
+	console.warn(res.msg);
+	console.warn('gameID: ' + res.game.id);
+	console.warn('players: ' + res.game.players);
 });
