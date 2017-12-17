@@ -11,7 +11,7 @@ var playerLimit = 3;
 var defaultGame =  { id: uuidv1() , players: [] };
 var Games = [];
 
-function createGame = () => {
+function createGame() {
 		var game = { ...defaultGame };
 		Games.push(game);
 		return game;
