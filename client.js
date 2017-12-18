@@ -1,9 +1,10 @@
 var SocketIOClient = require('socket.io-client');
-var socket = SocketIOClient('http://188.166.24.233:3000');
+var socket = SocketIOClient('http://localhost:1848');
+var uuidv1 = require('uuid/v1');
 var gameID = null;
-
 socket.emit('want-to-join', {
-	name: 'Péter',
+	id: uuidv1(),
+	name: 'Ákos',
 	phone: '+36306500546',
 	address: 'Budapest',
 });
